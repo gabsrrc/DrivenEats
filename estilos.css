@@ -1,0 +1,244 @@
+body {
+    background-color: aliceblue;
+  }
+  
+  * {
+    box-sizing: border-box;
+    border-color: #ffffff;
+  }
+  
+  button {
+    all: unset;
+    cursor: pointer;
+  }
+  
+  ion-icon {
+    color: #32b72f;
+  }
+  
+  b {
+    font-weight: bold;
+  }
+  
+  /* Projeto */
+  
+  .menu img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+  }
+  
+  .menu h4 {
+    font-family: "Righteous", cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    color: #333333;
+  }
+  
+  .menu h5 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+  }
+  
+  .menu h6 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color: #a6a6a6;
+  }
+  
+  .topo {
+    width: 100%;
+    height: 92px;
+    background-color: #cf2b2b;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .topo h5 {
+    font-family: "Righteous";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    color: #ffffff;
+    margin-left: 20px;
+  }
+  
+  .topo h6 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+  
+  .menu {
+    margin: 120px 10px;
+  }
+  
+  .head {
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .escolhaPrato,
+  .escolhaBebida,
+  .escolhaSobremesa {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+  
+  .prato,
+  .bebida,
+  .sobremesa {
+    width: 172px;
+    height: 202px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 8px;
+    padding: 9px;
+    border: 5px solid #ffffff;
+    position: relative;
+  }
+  
+  .check {
+    position: absolute;
+    color: #32b72f;
+    font-size: 16px;
+    bottom: 0;
+    right: 0;
+    margin: 4px;
+    display: none;
+  }
+  
+  .prato.selecionado .check,
+  .bebida.selecionado .check,
+  .sobremesa.selecionado .check {
+    display: block;
+  }
+  
+  button.selecionado {
+    border-color: #32b72f;
+  }
+  
+  .rodape {
+    width: 100%;
+    height: 92px;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rodape h6 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .selecao {
+    width: 364px;
+    height: 61px;
+    background: #cbcbcb;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 80px;
+  }
+  
+  .pedidoFechado {
+    width: 364px;
+    height: 61px;
+    background: #32b72f;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 80px;
+  }
+  
+  .escondido {
+    display: none;
+  }
+  
+  .backgroundConfirmacao {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+  }
+  
+  .confirmacao {
+    width: 377px;
+    height: 353px;
+    background: #50d074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    color: white;
+    margin: 150px auto;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .headConfirmacao,
+  .footConfirmacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .confirmacao button {
+    color: #32b72f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    width: 364px;
+    height: 61px;
+    background: white;
+    border-radius: 50px;
+    text-align: center;
+  }
+  

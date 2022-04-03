@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DrivenEats</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="backgroundConfirmacao escondido">
+      <div class="confirmacao">
+        <div class="headConfirmacao"><b>Confirme seu pedido</b></div>
+        <ul>
+          <li>
+            <div class="pratoConfirmado"></div>
+            <div class="pratoConfirmadoPreco"></div>
+          </li>
+          <li>
+            <div class="bebidaConfirmado"></div>
+            <div class="bebidaConfirmadoPreco"></div>
+          </li>
+          <li>
+            <div class="sobremesaConfirmado"></div>
+            <div class="sobremesaConfirmadoPreco"></div>
+          </li>
+          <li>
+            <div class="totalConfirmado"><b>TOTAL</b></div>
+            <div class="totalConfirmadoPreco"><b></b></div>
+          </li>
+        </ul>
+        <button onclick="confirmacaoPedido(this)">
+          <b>Tudo certo, pode pedir!</b>
+        </button>
+        <div class="footConfirmacao" onclick="cancelarConfirmacao(this)">
+          <b>Cancelar</b>
+        </div>
+      </div>
+    </div>
+    <div class="topo">
+      <h5>DrivenEats</h5>
+      <h6>Sua comida em 6 minutos</h6>
+    </div>
+    <div class="menu">
+      <section>
+        <div class="head"><h4>Primeiro, seu prato</h4></div>
+        <div class="escolhaPrato">
+          <button class="prato" onclick="selecionarPrato(this, 'Pizza', 34.90)">
+            <img
+              src="https://blog.duogourmet.com.br/wp-content/uploads/2019/07/41-Duo-Gourmet-pizza.jpg"
+              alt="pizza"
+            />
+            <h5>Pizza</h5>
+            <h6>Queijo e molho</h6>
+            <h5>R$34,90</h5>
+            <ion-icon
+              class="check escondido"
+              name="checkmark-circle"
+            ></ion-icon>
+          </button>
+          <button
+            class="prato"
+            onclick="selecionarPrato(this, 'Macarrão', 24.90)"
+          >
+            <img
+              src="https://www.sabornamesa.com.br/media/k2/items/cache/ead47d36e50510c345eb86a3568f763f_XL.jpg"
+              alt="macarrao"
+            />
+            <h5>Macarrão</h5>
+            <h6>Bolonhesa</h6>
+            <h5>R$24,90</h5>
+            <ion-icon
+              class="check escondido"
+              name="checkmark-circle"
+            ></ion-icon>
+          </button>
+          <button
+            class="prato"
+            onclick="selecionarPrato(this, 'Bruschetta', 14.90)"
+          >
+            <img
+              src="https://www.debemcomacomida.com.br/wp-content/uploads/2020/09/italian-bruschettas-7433A4M-scaled.jpg"
+              alt="bruschetta"
+            />
+            <h5>Bruschetta</h5>
+            <h6>Tomate, alho e manjericão</h6>
+            <h5>R$14,90</h5>
+            <ion-icon
+              class="check escondido"
+              name="checkmark-circle"
+            ></ion-icon>
+          </button>
+        </div>
+      </section>
+      <div class="head"><h4>Agora, sua bebida</h4></div>
+      <div class="escolhaBebida">
+        <button
+          class="bebida"
+          onclick="selecionarBebida(this, 'Soda Italiana', 15.90)"
+        >
+          <img
+            src="https://i1.wp.com/4a2.357.myftpupload.com/wp-content/uploads/2016/10/capa-sodas-italianas.jpg?fit=620%2C400"
+            alt="soda"
+          />
+          <h5>Soda Italiana</h5>
+          <h6>Maça verde, cranberry, limão</h6>
+          <h5>R$15,90</h5>
+          <ion-icon class="check escondido" name="checkmark-circle"></ion-icon>
+        </button>
+        <button
+          class="bebida"
+          onclick="selecionarBebida(this, 'Limoncello', 19.90)"
+        >
+          <img
+            src="https://claradesousa.pt/wp-content/uploads/2018/09/PRINCIPAL-1.jpg"
+            alt="limoncello"
+          />
+          <h5>Limoncello</h5>
+          <h6>Licor de limão</h6>
+          <h5>R$19,90</h5>
+          <ion-icon class="check escondido" name="checkmark-circle"></ion-icon>
+        </button>
+        <button class="bebida" onclick="selecionarBebida(this, 'Vinho', 29.90)">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOQ3B37ZG4tVFZDPqZEp7s_IyqWqDW8d8MvA&usqp=CAU"
+            alt="vinho"
+          />
+          <h5>Vinho</h5>
+          <h6>Taça de vinho da casa</h6>
+          <h5>R$29,90</h5>
+          <ion-icon class="check escondido" name="checkmark-circle"></ion-icon>
+        </button>
+      </div>
+      <div class="head"><h4>Por fim, sua sobremesa</h4></div>
+      <div class="escolhaSobremesa">
+        <button
+          class="sobremesa"
+          onclick="selecionarSobremesa(this, 'Gellato', 12.90)"
+        >
+          <img
+            src="https://polosulsc.com.br/wp-content/uploads/2018/04/Tr%C3%AAs-sabores-de-sorvete-artesanal-em-vitrine-1.jpg"
+            alt="gellato"
+          />
+          <h5>Gellato</h5>
+          <h6>Sorvete italiano</h6>
+          <h5>R$12,90</h5>
+          <ion-icon class="check escondido" name="checkmark-circle"></ion-icon>
+        </button>
+        <button
+          class="sobremesa"
+          onclick="selecionarSobremesa(this, 'Tiramisú', 9.90)"
+        >
+          <img
+            src="https://www.cozinhatecnica.com/wp-content/uploads/2019/09/tiramisu.jpg"
+            alt="tiramisu"
+          />
+          <h5>Tiramisú</h5>
+          <h6>Mascarpone e chocolate</h6>
+          <h5>R$9,90</h5>
+          <ion-icon class="check escondido" name="checkmark-circle"></ion-icon>
+        </button>
+        <button
+          class="sobremesa"
+          onclick="selecionarSobremesa(this, 'Panna cotta', 6.90)"
+        >
+          <img
+            src="https://img.itdg.com.br/tdg/images/blog/uploads/2018/01/panacota.jpg?w=1200"
+            alt="panna"
+          />
+          <h5>Panna cotta</h5>
+          <h6>Nata de leite e gelatina</h6>
+          <h5>R$6,90</h5>
+          <ion-icon class="check escondido" name="checkmark-circle"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="rodape">
+      <button class="selecao" onclick="alertaSelecao(this)">
+        <h6>Selecione os 3 itens para fechar o pedido</h6>
+      </button>
+      <button class="pedidoFechado escondido" onclick="revisarPedido(this)">
+        <h6>Fechar pedido</h6>
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
