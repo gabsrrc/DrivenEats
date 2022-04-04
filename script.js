@@ -10,7 +10,7 @@ let bebidaPreco;
 let sobremesa;
 let sobremesaPreco;
 
-//PRATO
+//PRATO E FECHAMENTO
 function selecionarPrato(pratoSelecionado, nome, preco) {
   const botaoSelecionado = document
     .querySelector(".escolhaPrato")
@@ -26,9 +26,17 @@ function selecionarPrato(pratoSelecionado, nome, preco) {
   pratoSelecionado.classList.add("selecionado");
 
   pratoFechado = pratoSelecionado.innerHTML;
+  
+   if (pratoFechado && bebidaFechado && sobremesaFechado) {
+    const botaoSelecao = document.querySelector(".selecao");
+    botaoSelecao.classList.add("escondido");
+
+    const botaoFechamento = document.querySelector(".pedidoFechado");
+    botaoFechamento.classList.remove("escondido");
+  }
 }
 
-//BEBIDA
+//BEBIDA E FECHAMENTO
 function selecionarBebida(bebidaSelecionado, nome, preco) {
   const botaoSelecionado = document
     .querySelector(".escolhaBebida")
@@ -43,6 +51,14 @@ function selecionarBebida(bebidaSelecionado, nome, preco) {
 
   bebidaSelecionado.classList.add("selecionado");
   bebidaFechado = bebidaSelecionado.innerHTML;
+  
+  if (pratoFechado && bebidaFechado && sobremesaFechado) {
+    const botaoSelecao = document.querySelector(".selecao");
+    botaoSelecao.classList.add("escondido");
+
+    const botaoFechamento = document.querySelector(".pedidoFechado");
+    botaoFechamento.classList.remove("escondido");
+  }
 }
 
 //SOBREMESA E FECHAMENTO
