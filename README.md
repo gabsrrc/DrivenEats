@@ -1,2 +1,2 @@
 # Projeto-03-DrivenEats
-Codesandbox: https://m2fs2h.csb.app
+Prévia no codesandbox: https://m2fs2h.csb.app
